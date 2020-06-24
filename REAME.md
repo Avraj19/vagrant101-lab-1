@@ -28,22 +28,17 @@ How to get working:
 https://rubyinstaller.org/downloads/
 ```
 Then I can install bundle.
-- In project folder file (this file) open bash
-- Then type in
+- [x] In project folder file (this file) open bash
+- [x] Then type in
 ```
 gem install bundler
 ```
-- Then go into "environment\spec-tests\Gemfile" (using bash)
-- Then type in
+- [x] Then go into "environment\spec-tests\Gemfile" (using bash)
+- [x] Then type in
 ```
 bundle install
 ```
-- Now start up VM (make sure the provisions have ran)
-- Go to "environment\spec-tests" (using bash), and type in
-```
-rake spec
-```
-- Installing nodejs, this will be in provision
+- [x] Installing nodejs, this will be in provision
 https://www.techiediaries.com/ubuntu/install-nodejs-npm-on-ubuntu-20-04/
 
 ```
@@ -51,11 +46,15 @@ curl -sL https://deb.nodesource.com/setup_11.x | sudo -E bash -
 sudo apt install curl
 sudo apt-get install -y nodejs
 ```
-- The last test is to install pm2, in provision
+- [x] The last test is to install pm2, in provision
 ```
 npm install -g pm2
 ```
-
+- [x] Now start up VM (make sure the provisions have ran)
+- [x] Go to "environment\spec-tests" (using bash), and type in
+```
+rake spec
+```
 
 
 Well I know the environment we want to:
