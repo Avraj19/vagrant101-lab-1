@@ -1,73 +1,57 @@
-# Vagrant provision class
+# Prerequisite
 
-Objectives:
-- Provisioning
-- Setting up a working app
-***
+1. Virtual box
+https://www.virtualbox.org/
+- This program used v6.1
 
-### Sudo code of what we want to do:
-- I want to create VM and set up a working app
-- I want is to be in VM because it will be standardize environment
+2. Installing Vagrant
+https://www.vagrantup.com/
+- This program used v2.2.9
 
-When you get work:
-- What language
-- What framework(s)?
-- Are there tests
-- Is there any specific package I need to install (bundle install and rake file)
-- Any specific version of packages
-
-How to get working:
-- This app used nodejs, a version of js.
-- The packages I will need are in "environment\spec-tests\Gemfile" but to install them will I will need to install ruby and ruby's package manager bundle.
-- Yes there are test
-  (to run tests go to "environment\spec-tests")
-
-## Steps get working:
-1. Download ruby
-```
+3. Download ruby
 https://rubyinstaller.org/downloads/
-```
-Then I can install bundle.
-- [x] In project folder file (this file) open bash
-- [x] Then type in
-```
+- Select recommended
+- Open bash
+```bash
+cd ~
 gem install bundler
 ```
-- [x] Then go into "environment\spec-tests\Gemfile" (using bash)
-- [x] Then type in
+
+
+
+
+
+# User Installation:
+
+1. Clone this repo
+2. Open git bash / equivalent
+3. 
+```bash
+cd starter-code
 ```
+
+4. In this project file (starter-code) open bash.
+Then go into "environment\spec-tests" (using bash) by
+```bash
+cd environment\spec-tests
+```
+Then
+```bash
 bundle install
 ```
-- [x] Installing nodejs, this will be in provision
-https://www.techiediaries.com/ubuntu/install-nodejs-npm-on-ubuntu-20-04/
+5. Running VM
+Navigate back to starter-code
+```bash
+cd ..
+cd ..
+vagrant up
+```
+- Starts up VM server (will take some time)
 
-```
-curl -sL https://deb.nodesource.com/setup_11.x | sudo -E bash -
-sudo apt install curl
-sudo apt-get install -y nodejs
-```
-- [x] The last test is to install pm2, in provision
-```
-npm install -g pm2
-```
-- [x] Now start up VM (make sure the provisions have ran)
-- [x] Go to "environment\spec-tests" (using bash), and type in
-```
+6.
+```bash
+cd environment/spec-tests
 rake spec
 ```
-
-
-Well I know the environment we want to:
-- ubuntu/xenial64
-- install nodejs
-- check how to install stuff in it (dependences)
-- I want it on port 80, for this I need a reverse proxy
--
-
-
-
-
-## how to sync folders
-```
-config.vm.synced_folder "folder_path_to_origin_folder", "path_in_main"
-```
+- To initialise and perform set tests
+- EXPECTED: 9 EXAMPLES, 0 FAILURES
